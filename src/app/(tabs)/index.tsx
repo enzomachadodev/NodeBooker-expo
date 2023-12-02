@@ -1,9 +1,11 @@
-import { Text, View } from "react-native";
+import { Link } from "expo-router";
+import { View } from "react-native";
 
 const Explore = () => {
   return (
     <View>
-      <Text>Explore</Text>
+      <Link href={"/(modals)/login"}>Login</Link>
+      <Link href={"/(modals)/booking"}>Booking</Link>
     </View>
   );
 };
