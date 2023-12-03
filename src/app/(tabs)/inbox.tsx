@@ -2,7 +2,7 @@ import { Text, View } from "react-native";
 
 const Inbox = () => {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Text>Inbox</Text>
     </View>
   );
