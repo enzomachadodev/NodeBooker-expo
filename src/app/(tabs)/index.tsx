@@ -1,10 +1,10 @@
-import { ExploreHeader } from "@/components/features/explore/ExploreHeader";
-import { Listings } from "@/components/features/explore/Listings";
-import { categories } from "@/utils/mocks/categories";
-import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import { useMemo, useState } from "react";
 import { Text, View } from "react-native";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { Listings } from "@/components/listings";
+import { ExploreHeader } from "@/components/explore-header";
+import { categories } from "@/utils/mocks/categories";
 import listingsData from "@/assets/data/airbnb-listings.json";
 
 const Explore = () => {
@@ -24,7 +24,6 @@ const Explore = () => {
         }}
       />
       <Listings category={category} listings={listings} />
-      <Text>teste</Text>
     </View>
   );
 };

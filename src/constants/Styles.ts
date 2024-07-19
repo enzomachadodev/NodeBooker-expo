@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import Colors from "./Colors";
 
-export const defautlStyles = StyleSheet.create({
+export const defaultStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.gray100,
