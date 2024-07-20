@@ -2,12 +2,13 @@ import React from "react";
 import { View, Text, StyleSheet, Platform, TextInput } from "react-native";
 import { useOAuth } from "@clerk/clerk-expo";
 import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 import { useWarmUpBrowser } from "@/hooks/useWarmUpBrowser";
 import { Button } from "@/components/common/Button";
-import { Ionicons } from "@expo/vector-icons";
+import { defaultStyles } from "@/constants/Styles";
 import Colors from "@/constants/Colors";
 import Sizes from "@/constants/Sizes";
-import { defaultStyles } from "@/constants/Styles";
+
 enum Strategy {
   Apple = "oauth_apple",
   Google = "oauth_google",
@@ -16,6 +17,7 @@ enum Strategy {
 
 const Login = () => {
   useWarmUpBrowser();
+
   const router = useRouter();
   const { startOAuthFlow: appleAuth } = useOAuth({ strategy: "oauth_apple" });
   const { startOAuthFlow: googleAuth } = useOAuth({ strategy: "oauth_google" });
