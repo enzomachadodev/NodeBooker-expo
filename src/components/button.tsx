@@ -7,7 +7,7 @@ import {
   TouchableOpacityProps,
   View,
 } from "react-native";
-import { IconProps } from "@/types/icon";
+import { IconProps } from "@/interfaces/icon";
 import Colors from "@/constants/Colors";
 import Sizes from "@/constants/Sizes";
 

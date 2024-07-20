@@ -67,20 +67,20 @@ const Login = () => {
         {Platform.OS === "ios" && (
           <Button
             onPress={() => onSelectAuth(Strategy.Apple)}
-            LeftIcon={(props) => <Ionicons name="md-logo-apple" {...props} />}
+            LeftIcon={(props) => <Ionicons name="logo-apple" {...props} />}
             title="Continue with Apple"
             variant="outline"
           />
         )}
         <Button
           onPress={() => onSelectAuth(Strategy.Google)}
-          LeftIcon={(props) => <Ionicons name="md-logo-google" {...props} />}
+          LeftIcon={(props) => <Ionicons name="logo-google" {...props} />}
           title="Continue with Google"
           variant="outline"
         />
         <Button
           onPress={() => onSelectAuth(Strategy.Facebook)}
-          LeftIcon={(props) => <Ionicons name="md-logo-facebook" {...props} />}
+          LeftIcon={(props) => <Ionicons name="logo-facebook" {...props} />}
           title="Continue with Facebook"
           variant="outline"
         />

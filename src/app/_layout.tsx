@@ -5,6 +5,8 @@ import { SplashScreen, Stack, useRouter } from "expo-router";
 import { useEffect } from "react";
 import { TouchableOpacity } from "react-native";
 import * as SecureStore from "expo-secure-store";
+import { ModalHeaderText } from "@/components/modal-header-text";
+import Colors from "@/constants/Colors";
 
 const CLERK_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
@@ -90,11 +92,12 @@ function RootLayoutNav() {
             fontFamily: "mon-sb",
           },
           headerTitleAlign: "center",
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => router.back()}>
-              <Ionicons name="close-outline" size={32} />
-            </TouchableOpacity>
-          ),
+
+          // headerLeft: () => (
+          //   <TouchableOpacity onPress={() => router.back()}>
+          //     <Ionicons name="close-outline" size={32} />
+          //   </TouchableOpacity>
+          // ),
         }}
       />
       <Stack.Screen
@@ -106,10 +109,20 @@ function RootLayoutNav() {
         options={{
           presentation: "transparentModal",
           animation: "fade",
-          headerTitleAlign: "center",
+          headerTransparent: true,
+          headerTitle: () => <ModalHeaderText />,
           headerLeft: () => (
-            <TouchableOpacity onPress={() => router.back()}>
-              <Ionicons name="close-outline" size={32} />
+            <TouchableOpacity
+              onPress={() => router.back()}
+              style={{
+                backgroundColor: "#fff",
+                borderColor: Colors.grey,
+                borderRadius: 20,
+                borderWidth: 1,
+                padding: 4,
+              }}
+            >
+              <Ionicons name="close-outline" size={22} />
             </TouchableOpacity>
           ),
         }}

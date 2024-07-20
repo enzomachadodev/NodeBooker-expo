@@ -16,7 +16,7 @@ import * as Haptics from "expo-haptics";
 import Colors from "@/constants/Colors";
 import Shadows from "@/constants/Shadows";
 import Sizes from "@/constants/Sizes";
-import { categories } from "@/utils/mocks/categories";
+import { categories } from "@/assets/data/categories";
 
 interface ExploreHeaderProps {
   onCategoryChanged: (category: string) => void;
