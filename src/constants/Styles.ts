@@ -7,6 +7,15 @@ export const defaultStyles = StyleSheet.create({
     backgroundColor: Colors.gray100,
   },
 
+  inputField: {
+    height: 44,
+    borderWidth: 1,
+    borderColor: "#ABABAB",
+    borderRadius: 8,
+    padding: 10,
+    backgroundColor: "#fff",
+  },
+
   footer: {
     position: "absolute",
     height: 100,

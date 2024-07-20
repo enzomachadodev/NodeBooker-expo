@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet, Platform } from "react-native";
-import { useWarmUpBrowser } from "@/hooks/useWarmUpBrowser";
-import { Input } from "@/components/common/Input";
-import Colors from "@/constants/Colors";
-import { Button } from "@/components/common/Button";
-import Sizes from "@/constants/Sizes";
-import { Ionicons } from "@expo/vector-icons";
+import { View, Text, StyleSheet, Platform, TextInput } from "react-native";
 import { useOAuth } from "@clerk/clerk-expo";
 import { useRouter } from "expo-router";
+import { useWarmUpBrowser } from "@/hooks/useWarmUpBrowser";
+import { Button } from "@/components/common/Button";
+import { Ionicons } from "@expo/vector-icons";
+import Colors from "@/constants/Colors";
+import Sizes from "@/constants/Sizes";
+import { defaultStyles } from "@/constants/Styles";
 enum Strategy {
   Apple = "oauth_apple",
   Google = "oauth_google",
@@ -45,7 +45,11 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <Input placeholder="Email" />
+      <TextInput
+        autoCapitalize="none"
+        placeholder="Email"
+        style={[defaultStyles.inputField, { marginBottom: 30 }]}
+      />
       <Button title="Continue" />
       <View style={styles.separatorView}>
         <View style={styles.separatorLine} />

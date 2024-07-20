@@ -1,27 +1,26 @@
-import Colors from "@/constants/Colors";
-import { defaultStyles } from "@/constants/Styles";
-import { useAuth, useUser } from "@clerk/clerk-expo";
-import { Ionicons } from "@expo/vector-icons";
-import { Link } from "expo-router";
 import { useEffect, useState } from "react";
 import {
   Image,
   SafeAreaView,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
+import { Link } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
+import { useAuth, useUser } from "@clerk/clerk-expo";
 import * as ImagePicker from "expo-image-picker";
-import { Input } from "@/components/common/Input";
+import { defaultStyles } from "@/constants/Styles";
 import { Button } from "@/components/common/Button";
-import { TextInput } from "react-native-gesture-handler";
+import Colors from "@/constants/Colors";
 
 const Profile = () => {
   const { signOut, isSignedIn } = useAuth();
   const { user } = useUser();
-  const [edit, setEdit] = useState(false);
 
+  const [edit, setEdit] = useState(false);
   const [firstName, setFirstName] = useState(user?.firstName);
   const [lastName, setLastName] = useState(user?.lastName);
   const [email, setEmail] = useState(user?.emailAddresses[0].emailAddress);
@@ -94,17 +93,17 @@ const Profile = () => {
             )}
             {edit && (
               <View style={styles.editRow}>
-                <Input
+                <TextInput
                   placeholder="First Name"
                   value={firstName || ""}
                   onChangeText={setFirstName}
-                  style={{ width: "40%" }}
+                  style={[defaultStyles.inputField, { width: 100 }]}
                 />
-                <Input
+                <TextInput
                   placeholder="Last Name"
                   value={lastName || ""}
                   onChangeText={setLastName}
-                  style={{ width: "40%" }}
+                  style={[defaultStyles.inputField, { width: 100 }]}
                 />
                 <TouchableOpacity onPress={onSaveUser}>
                   <Ionicons
@@ -174,7 +173,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    borderWidth: 1,
   },
 });
 
