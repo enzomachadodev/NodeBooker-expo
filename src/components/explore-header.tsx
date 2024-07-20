@@ -39,6 +39,7 @@ export const ExploreHeader = ({ onCategoryChanged }: ExploreHeaderProps) => {
     }
     onCategoryChanged(categories[index].name);
   };
+
   return (
     <SafeAreaView
       style={{

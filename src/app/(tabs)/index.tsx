@@ -9,6 +9,7 @@ import listingsDataGeo from "@/assets/data/airbnb-listings.geo.json";
 import { ListingsMap } from "@/components/listings-map";
 import { Listing } from "@/interfaces/listing";
 import { ListingGeo } from "@/interfaces/listing-geo";
+import { ListingsBottomSheet } from "@/components/listing-bottom-sheet";
 
 const Explore = () => {
   const listings = useMemo(() => listingsData as Listing[], []);
@@ -28,6 +29,7 @@ const Explore = () => {
         }}
       />
       <ListingsMap listings={geoItems} />
+      <ListingsBottomSheet category={category} listings={listings} />
     </View>
   );
 };

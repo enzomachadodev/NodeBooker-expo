@@ -2,7 +2,7 @@ import { defaultStyles } from "@/constants/Styles";
 import { ListingGeo } from "@/interfaces/listing-geo";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import React, { useEffect, useRef } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapView from "react-native-map-clustering";
@@ -20,7 +20,7 @@ interface ListingsMapProps {
   listings: ListingGeo;
 }
 
-export const ListingsMap = ({ listings }: ListingsMapProps) => {
+export const ListingsMapComponent = ({ listings }: ListingsMapProps) => {
   const router = useRouter();
   const mapRef = useRef<any>(null);
 
@@ -116,6 +116,10 @@ export const ListingsMap = ({ listings }: ListingsMapProps) => {
     </View>
   );
 };
+
+ListingsMapComponent.displayName = "ListingsMap";
+
+export const ListingsMap = memo(ListingsMapComponent);
 
 const styles = StyleSheet.create({
   container: {

@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Listing } from "@/interfaces";
+import { Listing } from "@/interfaces/listing";
 import { Ionicons } from "@expo/vector-icons";
 
 export const ListingItemRow: ListRenderItem<Listing> = ({
@@ -63,13 +63,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
     borderRadius: 10,
-  },
-
-  info: {
-    textAlign: "center",
-    fontFamily: "mon-sb",
-    fontSize: 16,
-    marginTop: 4,
   },
 
   likeButton: {
