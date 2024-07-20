@@ -2,7 +2,7 @@ import { defaultStyles } from "@/constants/Styles";
 import { useEffect, useRef, useState } from "react";
 import { FlatList, View } from "react-native";
 import { ListingItemRow } from "./listing-item-row";
-import { Listing } from "@/interfaces";
+import { Listing } from "@/interfaces/listing";
 
 interface ListingsProps {
   category: string;
@@ -14,8 +14,6 @@ export const Listings = ({ listings, category }: ListingsProps) => {
   const listRef = useRef<FlatList>(null);
 
   useEffect(() => {
-    console.log("RELOAD LISTINGS: ", listings.length);
-
     setLoading(true);
 
     setTimeout(() => {
