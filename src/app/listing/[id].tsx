@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import {
   View,
   Text,
@@ -17,11 +18,10 @@ import Animated, {
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { Listing } from "@/interfaces/listing";
-import listingsData from "@/assets/data/airbnb-listings.json";
 import { defaultStyles } from "@/constants/Styles";
-import { Button } from "@/components/common/Button";
+import { Button } from "@/components/button";
 import Colors from "@/constants/Colors";
-import { useLayoutEffect } from "react";
+import listingsData from "@/assets/data/airbnb-listings.json";
 
 const IMG_HEIGHT = 300;
 

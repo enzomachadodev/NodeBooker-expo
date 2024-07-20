@@ -4,7 +4,7 @@ import { useOAuth } from "@clerk/clerk-expo";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useWarmUpBrowser } from "@/hooks/useWarmUpBrowser";
-import { Button } from "@/components/common/Button";
+import { Button } from "@/components/button";
 import { defaultStyles } from "@/constants/Styles";
 import Colors from "@/constants/Colors";
 import Sizes from "@/constants/Sizes";

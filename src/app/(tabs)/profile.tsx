@@ -13,7 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useAuth, useUser } from "@clerk/clerk-expo";
 import * as ImagePicker from "expo-image-picker";
 import { defaultStyles } from "@/constants/Styles";
-import { Button } from "@/components/common/Button";
+import { Button } from "@/components/button";
 import Colors from "@/constants/Colors";
 
 const Profile = () => {
