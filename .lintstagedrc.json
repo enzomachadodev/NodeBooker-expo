@@ -1,3 +1,0 @@
-{
-  "*.tsx": ["yarn eslint 'src/**' --fix", "yarn prettier --check 'src/**'"]
-}
